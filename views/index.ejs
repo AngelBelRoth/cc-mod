@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>&infin;</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/4ffa3c6e4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- <h1>CC B2B</h1> -->
+  <div class="left">
+    <form action="/messages" method="POST">
+      <fieldset>
+        <!-- <label for="logo">Upload the Brand's Logo: <input id="logo" type="file" name="file" /></label> -->
+        <label for="brand">Brand: *<input value="<%= messages[0]?.brand %>" id="brand" name="brand" type="text"
+            required /></label>
+        <label for="company">Company Name: *<input value="<%= messages[0]?.company %>" id="company" name="company"
+            type="text" required /></label>
+        <label for="year">How long have you been in business? <input value="<%= messages[0]?.year %>" id="year"
+            type="number" name="year" min="0" max="2000" /></label>
+        <label for="hq">Headquater: *<input value="<%= messages[0]?.hq %>" id="hq" name="hq" type="text"
+            required /></label>
+        <label for="location">Location(s): <input value="<%= messages[0]?.location %>" id="location" name="location"
+            type="text" /></label>
+        <label for="person">Contact Person: *<input value="<%= messages[0]?.person %>" id="person" name="person"
+            type="text" required /></label>
+        <label for="position">Position: *<input value="<%= messages[0]?.position %>" id="position" name="position"
+            type="text" required /></label>
+        <label for="number">Contact Number: *<input value="<%= messages[0]?.number %>" id="number" name="number"
+            type="number" required /></label>
+        <label for="email">Email: *<input value="<%= messages[0]?.email %>" id="email" name="email" type="email"
+            required /></label>
+        <label for="website">Website: *<input value="<%= messages[0]?.website %>" id="website" name="website"
+            type="text" required /></label>
+        <label for="why">(In 100 words or less) Let us know your purpose driven mission(s): *
+          <textarea value="<%= messages[0]?.why %>" id="why" name="why" rows="3" cols="30"
+            placeholder="What's your why?" required></textarea>
+        </label>
+        <label for="offer">Tell us about the Product or Service you offer: *
+          <textarea value="<%= messages[0]?.offer %>" id="offer" name="offer" rows="3" cols="30" placeholder=""
+            required></textarea>
+        </label>
+        <label for="looking">What are you looking for to take your company to the next level?
+          <textarea value="<%= messages[0]?.looking %>" id="looking" name="looking" rows="3" cols="30"
+            placeholder=""></textarea>
+        </label>
+        <label for="unique">What makes you unique? <input value="<%= messages[0]?.unique %>" id="different"
+            name="unique" type="text" /></label>
+        <label for="else">Anything else you'd like us to know about your company? <input
+            value="<%= messages[0]?.else %>" id="else" name="else" type="text" /></label>
+        <label for="moonshot">What's your Moonshot: <input value="<%= messages[0]?.moonshot %>" id="moonshot"
+            name="moonshot" type="text" /></label>
+        <!-- <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label> -->
+      </fieldset>
+      <!-- <fieldset>
+        <legend>Business type * (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline"
+            checked /> Biohacking</label>
+        <label for="food"><input id="food" type="radio" name="account-type" class="inline" /> Food</label>
+        <label for="bevvy"><input id="bevvy" type="radio" name="account-type" class="inline" /> Beverage</label>
+        <label for="medicine"><input id="medicine" type="radio" name="account-type" class="inline" /> Medicine</label>
+        <label for="supplement"><input id="supplement" type="radio" name="account-type" class="inline" />
+          Supplement</label>
+        <label for="spiritual"><input id="spiritual" type="radio" name="account-type" class="inline" />
+          Spiritual</label>
+        <label for="psychiatry"><input id="psychiatry" type="radio" name="account-type" class="inline" />
+          Psychiatry</label>
+        <label for="phyisical-theraphy"><input id="phyisical-theraphy" type="radio" name="account-type"
+            class="inline" />
+          Phyisical Theraphy</label>
+        <label for="software"><input id="software" type="radio" name="account-type" class="inline" /> Software /
+          AI</label>
+        <label for="hardware"><input id="hardware" type="radio" name="account-type" class="inline" /> Hardware /
+          Wearable</label>
+        <label for="publication"><input id="publication" type="radio" name="account-type" class="inline" />
+          Publication</label>
+        <label for="marketing"><input id="marketing" type="radio" name="account-type" class="inline" />
+          Marketing</label>
+        <label for="investor"><input id="investor" type="radio" name="account-type" class="inline" /> Investor</label>
+        <label for="other"><input id="other" type="radio" name="account-type" class="inline" /> Other</label>
+        <label for=""><input id="" type="radio" name="account-type" class="inline" /> </label>
+      </fieldset> -->
+      <!-- <fieldset>
+        <label for="referrer">How did you hear about us?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Invitation</option>
+            <option value="2">Group Chat</option>
+            <option value="3">Socials</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+      </fieldset> -->
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept
+        the <a href="">terms and conditions</a>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+
+  <div class="right">
+    <fieldset>
+      <p>Brand:</p>
+        <%= messages[0]?.brand %>
+      <p>Company Name:</p>
+        <%= messages[0]?.company %>
+      <p>How long have you been in business?</p>
+        <%= messages[0]?.year %>
+      <p>Headquater:<p>
+        <%= messages[0]?.hq %>
+      <p>Location(s):</p>
+        <%= messages[0]?.location %>
+      <p>Contact Person:</p>
+        <%= messages[0]?.person %>
+      <p>Position:</p>
+        <%= messages[0]?.position %>
+      <p>Contact Number:</p>
+        <%= messages[0]?.number %>
+      <p>Email:</p>
+        <%= messages[0]?.email %>
+      <p>Website:</p>
+        <%= messages[0]?.website %>
+      <p>This is our mission(s):</p>
+        <%= messages[0]?.why %>
+      <p>The Product or Service that we offer:</p>
+        <%= messages[0]?.offer %>
+      <p>What we are looking for to take our company to the next level?</p>
+        <%= messages[0]?.looking %>
+      <p>What makes us unique?</p>
+        <%= messages[0]?.unique %>
+      <p>Anything else you'd like us to know about your company?</p>
+        <%= messages[0]?.else %>
+      <p>What's your Moonshot:</p>
+        <%= messages[0]?.moonshot %>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
