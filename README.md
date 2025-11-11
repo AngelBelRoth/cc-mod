@@ -1,4 +1,4 @@
-# cc-mod  
+# cc-registration
 > First prototype of Community Connect's registration and profile modification page.
 
 ## 🧩 What is cc-mod?  
@@ -10,3 +10,4 @@
    ```bash
    git clone https://github.com/AngelBelRoth/cc-mod.git
    cd cc-mod
+
